@@ -1,23 +1,23 @@
 package com.github.peggybrown.speechrank.entity;
 
-import javaslang.collection.List;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-import lombok.Data;
+import java.util.Collections;
+import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-@Data
+@Getter
+@AllArgsConstructor
 public class Year {
+
+    private final Long id;
     private final String year;
 
-    @JsonIgnore
-    private List<Conference> conferences = List.empty();
-
-    public Void addConference(Conference conf) {
-        conferences = conferences.append(conf);
-        //TODO what to return here?
-        return null;
+    public List<Conference> getConferences() {
+        return Collections.emptyList();
     }
 
+    public void addConference(Object object) {
 
+    }
 }

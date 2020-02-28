@@ -1,19 +1,18 @@
 package com.github.peggybrown.speechrank.dto;
 
-import lombok.Data;
-
 import com.github.peggybrown.speechrank.entity.Conference;
+import lombok.Data;
 
 @Data
 public class YearsConferenceDto {
-    private String id;
+    private Long id;
     private String name;
     private int presentations;
 
     public YearsConferenceDto(Conference c) {
         id = c.getId();
         name = c.getName();
-        presentations = c.getPresentations().length();
+        presentations = c.getPresentations().size();
 
     }
 }

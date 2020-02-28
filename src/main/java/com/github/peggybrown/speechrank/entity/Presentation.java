@@ -14,6 +14,7 @@ import java.util.UUID;
 public class Presentation {
 
     private String id;
+    private String conferenceId;
     private String title;
     private String link;
     private Double rating;
